@@ -1,4 +1,6 @@
 import * as React from "react"
+import  Layout  from '../components/layout'
+
 
 // styles
 const pageStyles = {
@@ -126,7 +128,7 @@ const links = [
 ]
 
 // markup
-const IndexPage = () => {
+/*const IndexPage = () => {
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
@@ -179,6 +181,18 @@ const IndexPage = () => {
       />
     </main>
   )
+}*/
+const IndexPage = () => {
+  return (
+    <main>
+      <Layout pageTitle="Home Page">
+      <title>Home Page</title>
+      <h1>Welcome to my Gatsby site!</h1>
+      <p>I'm making this by following the Gatsby Tutorial.</p>
+    </Layout>
+    </main>
+  )
 }
+
 
 export default IndexPage
