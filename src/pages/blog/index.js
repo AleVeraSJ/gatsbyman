@@ -9,12 +9,12 @@ const BlogPage = ({ data }) => {
     {
        data.allMdx.nodes.map(node => (
         <article key={node.id}>
-          <h2>
+            <h2>
               <Link to={`/blog/${node.slug}`}>
                 {node.frontmatter.title}
               </Link>
             </h2>
-          <p>Posted: {node.frontmatter.date}</p>
+            <p>Posted: {node.frontmatter.date}</p>
         </article>
       ))
     }
@@ -32,6 +32,7 @@ query {
         date(formatString: "MMMM DD, YYYY")
       }
       id
+      slug
     }
   }
 }
